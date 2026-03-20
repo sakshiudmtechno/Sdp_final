@@ -12,6 +12,8 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

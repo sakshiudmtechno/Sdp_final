@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.webp";
 
@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Gallery", path: "/gallery" },
   { name: "Reviews", path: "/reviews" },
+  { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -20,24 +21,27 @@ const Navbar = () => {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-secondary text-secondary-foreground text-sm py-2">
-        <div className="container-custom flex justify-between items-center px-4">
-          <div className="flex items-center gap-4">
-            <a href="mailto:info@sdpservices.com" className="hidden sm:inline hover:text-primary transition-colors">
-              info@sdpservices.com
+      <div className="bg-secondary text-secondary-foreground text-xs sm:text-sm py-2 border-b border-secondary-foreground/10">
+        <div className="container-custom flex justify-center sm:justify-between items-center px-4 gap-3 flex-wrap">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <a href="tel:+918494858565" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Phone className="w-3.5 h-3.5 text-primary" />
+              <span>+91 84948 58565</span>
             </a>
-            <a href="tel:+918494858565" className="hover:text-primary transition-colors">
-              +91 84948 58565
-            </a>
-            <a href="tel:+917267849960" className="hover:text-primary transition-colors">
-              7267849960
+            <a href="tel:+917267849960" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Phone className="w-3.5 h-3.5 text-primary" />
+              <span>7267849960</span>
             </a>
           </div>
+          <a href="mailto:info@sdpservices.com" className="hidden sm:flex items-center gap-1.5 hover:text-primary transition-colors">
+            <Mail className="w-3.5 h-3.5 text-primary" />
+            <span>info@sdpservices.com</span>
+          </a>
         </div>
       </div>
 
       {/* Main nav */}
-      <nav className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-secondary">
+      <nav className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-secondary-foreground/10">
         <div className="container-custom flex items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center">
             <img src={logo} alt="SDP Services" className="h-12 w-auto" />
