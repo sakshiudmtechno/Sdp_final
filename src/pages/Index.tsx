@@ -11,14 +11,54 @@ import kotaStone from "@/assets/kota-stone.jpg";
 import carpetCleaning from "@/assets/carpet-cleaning.jpg";
 
 const services = [
-  { icon: "✨", title: "Italian Marble Polishing", desc: "Restore the premium shine and smooth finish of Italian marble with expert care.", img: servicePolishing },
-  { icon: "🏡", title: "Indian Marble Polishing", desc: "Enhance durability and restore the natural look of traditional marble flooring.", img: beforeAfterImg },
-  { icon: "🪨", title: "Granite Polishing", desc: "Get a glossy, long-lasting finish for your granite surfaces.", img: granitePolish },
-  { icon: "🧱", title: "Kota Stone Polishing", desc: "Bring back the natural texture and elegance of Kota stone floors.", img: kotaStone },
-  { icon: "💎", title: "Luxury Marble Polishing", desc: "Premium polishing for high-end marble surfaces.", img: hotelLobby },
-  { icon: "🏢", title: "Floor Maintenance", desc: "Keep your commercial spaces clean, shiny, and professional.", img: hotelLobby },
-  { icon: "🧼", title: "Deep Cleaning Services", desc: "Complete cleaning solutions for hygienic and spotless spaces.", img: deepCleaning },
-  { icon: "🧽", title: "Carpet Cleaning", desc: "Remove stains, dirt, and odor with deep carpet cleaning.", img: carpetCleaning },
+  {
+    icon: "✨",
+    title: "Italian Marble Polishing",
+    desc: "Restore the premium shine and smooth finish of Italian marble with expert care.",
+    img: servicePolishing,
+  },
+  {
+    icon: "🏡",
+    title: "Indian Marble Polishing",
+    desc: "Enhance durability and restore the natural look of traditional marble flooring.",
+    img: beforeAfterImg,
+  },
+  {
+    icon: "🪨",
+    title: "Granite Polishing",
+    desc: "Get a glossy, long-lasting finish for your granite surfaces.",
+    img: granitePolish,
+  },
+  {
+    icon: "🧱",
+    title: "Kota Stone Polishing",
+    desc: "Bring back the natural texture and elegance of Kota stone floors.",
+    img: kotaStone,
+  },
+  {
+    icon: "💎",
+    title: "Luxury Marble Polishing",
+    desc: "Premium polishing for high-end marble surfaces.",
+    img: hotelLobby,
+  },
+  {
+    icon: "🏢",
+    title: "Floor Maintenance",
+    desc: "Keep your commercial spaces clean, shiny, and professional.",
+    img: hotelLobby,
+  },
+  {
+    icon: "🧼",
+    title: "Deep Cleaning Services",
+    desc: "Complete cleaning solutions for hygienic and spotless spaces.",
+    img: deepCleaning,
+  },
+  {
+    icon: "🧽",
+    title: "Carpet Cleaning",
+    desc: "Remove stains, dirt, and odor with deep carpet cleaning.",
+    img: carpetCleaning,
+  },
 ];
 
 const whyChoose = [
@@ -37,9 +77,17 @@ const stats = [
 ];
 
 const testimonials = [
-  { text: "SDP Services made our marble floors look brand new. Highly professional team!", name: "Rakesh N", location: "Bangalore" },
+  {
+    text: "SDP Services made our marble floors look brand new. Highly professional team!",
+    name: "Rakesh N",
+    location: "Bangalore",
+  },
   { text: "Outstanding work! Our hotel lobby shines like never before.", name: "Ayesha M", location: "Bangalore" },
-  { text: "Best granite polishing service in Bangalore. Highly recommended!", name: "Sandeep K", location: "Bangalore" },
+  {
+    text: "Best granite polishing service in Bangalore. Highly recommended!",
+    name: "Sandeep K",
+    location: "Bangalore",
+  },
 ];
 
 const fadeUp = {
@@ -69,9 +117,7 @@ const Index = () => {
               #1 Marble Polishing in Bangalore
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Premium Marble & Floor{" "}
-              <span className="text-gradient">Polishing Services</span>{" "}
-              in Bangalore
+              Premium Marble & Floor <span className="text-gradient">Polishing Services</span> in Bangalore
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl mb-8 leading-relaxed">
               Bring back the shine, elegance, and life to your floors with expert polishing and restoration services.
@@ -103,7 +149,11 @@ const Index = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
-              <img src={beforeAfterImg} alt="Before and after marble polishing" className="rounded-2xl shadow-lg w-full" />
+              <img
+                src={beforeAfterImg}
+                alt="Before and after marble polishing"
+                className="rounded-2xl shadow-lg w-full"
+              />
             </motion.div>
             <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }}>
               <span className="text-primary font-semibold text-sm uppercase tracking-widest mb-2 block">About Us</span>
@@ -111,10 +161,12 @@ const Index = () => {
                 Bringing Surfaces Back to Life with Precision & Perfection
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                At SDP Services (Shree Dwarka Marble & Floor Polishing), we specialize in high-quality marble polishing, granite polishing, tile polishing, and deep cleaning services across Bangalore.
+                At SDP Services (Shree Dwarka Marble & Floor Polishing), we specialize in high-quality marble polishing,
+                granite polishing, tile polishing, and deep cleaning services across Bangalore.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                With years of experience and advanced techniques, we restore the natural beauty and shine of your floors, making them look brand new again.
+                With years of experience and advanced techniques, we restore the natural beauty and shine of your
+                floors, making them look brand new again.
               </p>
             </motion.div>
           </div>
@@ -124,7 +176,11 @@ const Index = () => {
       {/* Services */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
-          <SectionHeading subtitle="Our Services" title="What We Offer" description="Complete floor care solutions tailored to your needs" />
+          <SectionHeading
+            subtitle="Our Services"
+            title="What We Offer"
+            description="Complete floor care solutions tailored to your needs"
+          />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
               <motion.div
