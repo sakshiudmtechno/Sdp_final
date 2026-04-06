@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { Phone, MessageCircle, Star, CheckCircle, Users, Award, ThumbsUp } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+
 import heroImg from "@/assets/hero-marble.jpg";
-import beforeAfterImg from "@/assets/before-after.jpg";
+import beforeAfterImg from "@/assets/team photo  Marble Polishing .png";
 import servicePolishing from "@/assets/service-polishing.jpg";
 import granitePolish from "@/assets/granite-polish.jpg";
 import hotelLobby from "@/assets/hotel-lobby.jpg";
@@ -11,54 +13,14 @@ import kotaStone from "@/assets/kota-stone.jpg";
 import carpetCleaning from "@/assets/carpet-cleaning.jpg";
 
 const services = [
-  {
-    icon: "✨",
-    title: "Italian Marble Polishing",
-    desc: "Restore the premium shine and smooth finish of Italian marble with expert care.",
-    img: servicePolishing,
-  },
-  {
-    icon: "🏡",
-    title: "Indian Marble Polishing",
-    desc: "Enhance durability and restore the natural look of traditional marble flooring.",
-    img: beforeAfterImg,
-  },
-  {
-    icon: "🪨",
-    title: "Granite Polishing",
-    desc: "Get a glossy, long-lasting finish for your granite surfaces.",
-    img: granitePolish,
-  },
-  {
-    icon: "🧱",
-    title: "Kota Stone Polishing",
-    desc: "Bring back the natural texture and elegance of Kota stone floors.",
-    img: kotaStone,
-  },
-  {
-    icon: "💎",
-    title: "Luxury Marble Polishing",
-    desc: "Premium polishing for high-end marble surfaces.",
-    img: hotelLobby,
-  },
-  {
-    icon: "🏢",
-    title: "Floor Maintenance",
-    desc: "Keep your commercial spaces clean, shiny, and professional.",
-    img: hotelLobby,
-  },
-  {
-    icon: "🧼",
-    title: "Deep Cleaning Services",
-    desc: "Complete cleaning solutions for hygienic and spotless spaces.",
-    img: deepCleaning,
-  },
-  {
-    icon: "🧽",
-    title: "Carpet Cleaning",
-    desc: "Remove stains, dirt, and odor with deep carpet cleaning.",
-    img: carpetCleaning,
-  },
+  { title: "Italian Marble Polishing", desc: "Restore the premium shine and smooth finish of Italian marble with expert care.", img: servicePolishing },
+  { title: "Indian Marble Polishing", desc: "Enhance durability and restore the natural look of traditional marble flooring.", img: beforeAfterImg },
+  { title: "Granite Polishing", desc: "Get a glossy, long-lasting finish for your granite surfaces.", img: granitePolish },
+  { title: "Kota Stone Polishing", desc: "Bring back the natural texture and elegance of Kota stone floors.", img: kotaStone },
+  { title: "Luxury Marble Polishing", desc: "Premium polishing for high-end marble surfaces.", img: hotelLobby },
+  { title: "Floor Maintenance", desc: "Keep your commercial spaces clean, shiny, and professional.", img: hotelLobby },
+  { title: "Deep Cleaning Services", desc: "Complete cleaning solutions for hygienic and spotless spaces.", img: deepCleaning },
+  { title: "Carpet Cleaning", desc: "Remove stains, dirt, and odor with deep carpet cleaning.", img: carpetCleaning },
 ];
 
 const whyChoose = [
@@ -77,17 +39,9 @@ const stats = [
 ];
 
 const testimonials = [
-  {
-    text: "SDP Services made our marble floors look brand new. Highly professional team!",
-    name: "Rakesh N",
-    location: "Bangalore",
-  },
+  { text: "SDP Services made our marble floors look brand new. Highly professional team!", name: "Rakesh N", location: "Bangalore" },
   { text: "Outstanding work! Our hotel lobby shines like never before.", name: "Ayesha M", location: "Bangalore" },
-  {
-    text: "Best granite polishing service in Bangalore. Highly recommended!",
-    name: "Sandeep K",
-    location: "Bangalore",
-  },
+  { text: "Best granite polishing service in Bangalore. Highly recommended!", name: "Sandeep K", location: "Bangalore" },
 ];
 
 const fadeUp = {
@@ -98,9 +52,20 @@ const fadeUp = {
 };
 
 const Index = () => {
+
+  // Load Elfsight script once
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <div>
-      {/* Hero */}
+
+      {/* ======= (Hero, About, Services, Why Choose) SAME AS YOUR CODE ======= */}
+{/* Hero */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img src={heroImg} alt="Polished marble floor" className="w-full h-full object-cover" />
@@ -231,7 +196,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* ================= Our Achievements ================= */}
       <section className="section-padding bg-background">
         <div className="container-custom">
           <SectionHeading subtitle="Our Achievements" title="Numbers That Speak" />
@@ -254,7 +219,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* ✅ Instagram Feed EXACTLY after Achievements */}
+      <section className="section-padding bg-background">
+        <div className="container-custom text-center">
+          <div
+            className="elfsight-app-3065fe8b-b9ac-4a52-9d49-73ac46cd269d"
+            data-elfsight-app-lazy
+          ></div>
+        </div>
+      </section>
+
+      {/* ===== Testimonials, CTA etc SAME AS YOUR CODE ===== */}
+ {/* Testimonials */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
           <SectionHeading subtitle="Testimonials" title="What Our Clients Say" />
@@ -319,6 +295,7 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 };

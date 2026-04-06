@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/logo.webp";
 
 const Footer = () => {
@@ -13,6 +13,27 @@ const Footer = () => {
             <p className="text-secondary-foreground/70 text-sm leading-relaxed">
               Premium marble & floor polishing services in Bangalore. Bringing surfaces back to life with precision & perfection.
             </p>
+
+            {/* Social Icons Added */}
+            <div className="flex gap-4 mt-4">
+              <a
+                href="https://www.instagram.com/shreedwarkapolishing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/70 hover:text-primary transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/shreedwarkapolishingservices/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/70 hover:text-primary transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -25,8 +46,8 @@ const Footer = () => {
                 { name: "Services", path: "/services" },
                 { name: "Gallery", path: "/gallery" },
                 { name: "Reviews", path: "/reviews" },
-              { name: "Blog", path: "/blog" },
-              { name: "Contact", path: "/contact" },
+                { name: "Blog", path: "/blog" },
+                { name: "Contact", path: "/contact" },
               ].map((link) => (
                 <Link
                   key={link.path}
@@ -65,19 +86,21 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-primary" /> info@sdpservices.com
               </a>
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                <span>Bangalore, Karnataka</span>
+                <MapPin className="w-9 h-10 text-primary mt-0.5" />
+                <span>Konnena Agrahara, Murugesh Palya Bengaluru – 560017 Karnataka, India</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-secondary-foreground/10 py-6 text-center text-sm text-secondary-foreground/50">
-        <div className="container-custom px-4">
-          © {new Date().getFullYear()} SDP Services. All Rights Reserved.
-        </div>
-      </div>
+      <div className="border-t border-secondary-foreground/10 py-6 text-sm text-secondary-foreground/50">
+  <div className="container-custom px-4 flex items-center justify-center gap-2">
+    <span>© {new Date().getFullYear()} SDP Services. All Rights Reserved.</span>
+    <span>|</span>
+    <span>Develop By UDM❤️</span>
+  </div>
+</div>
     </footer>
   );
 };

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
-import beforeAfterImg from "@/assets/before-after.jpg";
+import beforeAfterImg from "@/assets/team photo  Marble Polishing .png";
 import servicePolishing from "@/assets/service-polishing.jpg";
 import { CheckCircle } from "lucide-react";
 

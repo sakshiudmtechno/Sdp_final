@@ -30,7 +30,9 @@ const SectionHeading = ({ subtitle, title, description, light }: SectionHeadingP
         </p>
       )}
       <div className="w-20 h-1 bg-primary mx-auto mt-6 rounded-full" />
+      
     </motion.div>
+   
   );
 };
 
